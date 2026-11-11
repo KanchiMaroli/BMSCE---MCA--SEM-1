@@ -33,16 +33,31 @@ Constraint: The output must contain exactly one category word, without explanati
 punctuation, or additional text.
 
 Prompt:
-create an AI model for an e-commerce company that receives numerous customer queries related to orders, deliveries, payments, refunds, cancellations, and product defects. please design an effective model that classifies each customer query into the appropriate predefined
-category.
-create a model that can read the customer queries understand/analyze it and give a 1 worded classification based on the categories provided, include code for the model as well
-Categories:
-• Delivery
-• Shipping
-• Refund
-• Payment
-• Cancellation
-• Defect
-• Return
-• Account
-• Unknown
+create an AI-based customer query classification system for an e-commerce company. Its task is to read and understand customer queries and classify them into one of the following nine categories:
+
+Delivery
+Shipping
+Refund
+Payment
+Cancellation
+Defect
+Return
+Account
+Unknown
+The system must understand the customer's query, identify the main issue, and select the most appropriate category based on its meaning.
+
+It must consider the context of the complete sentence rather than just individual keywords. If a query does not match any of the given categories, it must classify it as Unknown.
+
+The chatbot must always respond with exactly one word, using only the predefined category names. It must not provide explanations, suggestions, or additional information.
+
+Examples:
+
+Where is my order? → Delivery
+My payment failed → Payment
+I want my money back → Refund
+Cancel my order → Cancellation
+My product is broken → Defect
+I want to return my shoes → Return
+I cannot log in → Account
+What is the weather today? → Unknown
+The system must perform only the classification task and return one appropriate category for every customer query.
